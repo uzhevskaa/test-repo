@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мой сайт с чат-ботом</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .card {
+            max-width: 700px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            border: 1px solid #e9edf2;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #eef2ff;
+            color: #4f46e5;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.3rem 0.9rem;
+            border-radius: 20px;
+            letter-spacing: 0.02em;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+        }
+
+        h1 span {
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #4f46e5, #7c3aed);
+            border-radius: 10px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .feature-item {
+            background: #f1f4f9;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #1e293b;
+            font-weight: 450;
+        }
+
+        .hint {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            border-top: 1px solid #e9edf2;
+            padding-top: 2rem;
+            margin-top: 0.5rem;
+        }
+
+        .hint strong {
+            color: #334155;
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 2rem 1.5rem;
+            }
+            h1 {
+                font-size: 1.6rem;
+            }
+            .subtitle {
+                font-size: 0.95rem;
+            }
+            .feature-item {
+                font-size: 0.8rem;
+                padding: 0.4rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="badge">🤖 Работает с вашим контентом</div>
+        <h1>Привет! Я — <span>чат-бот</span></h1>
+        <p class="subtitle">
+            Отвечу на вопросы, помогу найти информацию<br />
+            и всегда буду на связи. Нажмите на иконку внизу справа 👇
+        </p>
+        <div class="divider"></div>
+        <div class="features">
+            <span class="feature-item">📄 Знаю ваши документы</span>
+            <span class="feature-item">⚡️ Отвечаю мгновенно</span>
+            <span class="feature-item">🔒 Безопасно</span>
+        </div>
+        <p class="hint">
+            <strong>Виджет уже загружен</strong> — просто кликните по кнопке чата в правом нижнем углу
+        </p>
+    </div>
+
+    <!-- ВИДЖЕТ ОТ LOVABLE -->
+    <script src="https://72d355c7-b9cc-41dd-9c96-a3cdc1f9857c.lovableproject.com/widget.js">
+    </script>
+    <script>
+        // Проверка, что функция существует, перед вызовом
+        if (typeof initWidget === 'function') {
+            initWidget({ botId: "ws5c1w6pmqsggvc2" });
+        } else {
+            console.warn('Виджет не загружен. Проверьте соединение или запустите через локальный сервер.');
+        }
+    </script>
+
+</body>
+</html>
